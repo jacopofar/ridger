@@ -1,5 +1,8 @@
 from math import sqrt
-from ridger import generate_ridge_image, IMSIZE
+
+from ridger import generate_ridge_image
+
+IMSIZE = (1500, 1500)
 
 
 def height_map(x, y):
@@ -14,12 +17,13 @@ def height_map(x, y):
 
 
 def line_color(x1, y1, x2, y2):
+    # create a shadow effect, as if light came from the left
     if y1 == y2:
-        return (255, 255, 255, 255)
+        return (200, 200, 200, 255)
     elif y1 < y2:
-        return (255, 0, 0, 255)
+        return (128, 128, 128, 255)
     else:
-        return (0, 255, 0, 255)
+        return (255, 255, 255, 255)
 
 
 def data_to_screen(x, y) -> tuple[int, int]:
@@ -35,6 +39,11 @@ def data_to_screen(x, y) -> tuple[int, int]:
     return x, y
 
 
-generate_ridge_image(
-    height_map, line_color, bgcolor=(128, 128, 128, 255), data_to_screen=data_to_screen
-).show()
+if __name__ == "__main__":
+    generate_ridge_image(
+        height_map,
+        line_color,
+        bgcolor=(0, 0, 0, 255),
+        data_to_screen=data_to_screen,
+        imsize=IMSIZE,
+    ).show()
