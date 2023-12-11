@@ -3,6 +3,7 @@
 Ridgeline plot (aka Joyplot) library in Python
 
 ![A ridge plot showing the words Hello World in a pseudo 3D fashion](hello_world.png)
+![A ridge plot showing a donut in a pseudo 3D fashion](donut.png)
 
 ## Usage
 
