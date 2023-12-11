@@ -1,7 +1,7 @@
 [project]
 name = "ridger"
 version = "0.1.0"
-description = "Create ridge images"
+description = "Create ridge (joygram) images"
 authors = [
     {name = "Jacopo Farina",email = "jacopo1.farina@gmail.com"},
 ]
